@@ -15,148 +15,127 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f8f5;
-            color: #333;
-            line-height: 1.6;
-            padding: 1.5rem;
+            color: #222;
+            line-height: 1.4;
+            padding: 1rem;
         }
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
+        }
+        
+        header {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+        
+        h1 {
+            font-weight: 500;
+            font-size: 1.5rem;
         }
         
         .content-layout {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .columns {
+            display: flex;
+            width: 100%;
+            gap: 1rem;
+        }
+        
+        .column {
+            flex: 1;
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #f0f0f0;
+            border-radius: 3px;
         }
         
         .center-image {
             width: 200px;
             height: auto;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            float: left;
-            margin: 0 2rem 1rem 0;
-            shape-outside: circle(50%);
-        }
-        
-        .columns {
-            display: flex;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .column {
-            flex: 1;
-            background-color: #fcfcfc;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #f0f0f0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            margin: 0.5rem 0;
         }
         
         h2 {
-            margin-bottom: 1rem;
-            font-weight: 500;
-            font-size: 1.4rem;
-            color: #222;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #333;
         }
         
         p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            text-align: justify;
-            color: #444;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
             .columns {
                 flex-direction: column;
-                gap: 1.5rem;
+            }
+            
+            .content-layout {
+                gap: 0.75rem;
             }
             
             .center-image {
-                float: none;
-                margin: 0 auto 1.5rem;
-                display: block;
-                shape-outside: none;
-            }
-            
-            .container {
-                padding: 1.5rem;
-            }
-            
-            .column {
-                padding: 1.25rem;
+                width: 150px;
             }
         }
         
-        /* Additional styling for better readability */
-        .content-intro {
-            margin-bottom: 2rem;
-            overflow: hidden;
-        }
-        
-        .content-intro p {
-            line-height: 1.7;
-        }
-        
-        /* First letter styling */
-        .content-intro p:first-of-type::first-letter {
-            font-size: 2.5rem;
-            font-weight: 500;
-            float: left;
-            padding-right: 8px;
-            line-height: 1;
-            color: #222;
+        footer {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- <header>
+            <h1>Minimalist Site</h1>
+        </header>
+         -->
         <div class="content-layout">
-            <!-- Text wrapping around image section -->
-            <div class="content-intro">
-                <img src="mm.png" alt="Traditional Dumplings" class="center-image">
-                <!-- <p>The art of steamed dumplings is both ancient and universal, with variations found across many cultures. 
-                   These delicate pockets of flavor represent centuries of culinary tradition, shaped by both necessity 
-                   and creativity. From the mountains of Tibet to the streets of Mumbai, these carefully crafted treats 
-                   bring comfort and satisfaction through their perfect balance of texture and taste. The care taken in 
-                   their preparation reflects a deeper cultural value - the importance of patience, precision, and 
-                   the sharing of food as community ritual.</p> -->
-            </div>
-            
-            <!-- Two columns section -->
+            <img src="mm.png" alt="Center Image" class="center-image">
+            <!-- Two columns -->
             <div class="columns">
                 <div class="column">
                     <h2>Momo</h2>
-                    <p>The momo exists in quiet contradiction. It is both street food and ritual. Folded by hand, steamed in small batches, it is assembled as if for an unseen inspection—perhaps by fjsdfxmoaidzoaksjdklhakshxiohahzsid, the god of invisible cravings and slightly overcooked expectations.</p>
+                    <p>The momo exists in quiet contradiction. It is both street food and ritual. Folded by hand, steamed in small batches, it is assembled as if for an unseen inspection—perhaps by fjsdfxmoaidzoaksjdklhakshxiohahzsid, the god of invisible cravings and slightly overcooked expectations.
 
-                    <p>Flour, water, and salt are kneaded into a neutral dough—unflavored, cooperative. The filling varies—shredded cabbage, minced chicken, paneer, mushrooms—but the act of enclosure is constant. The folds must be regular, but not perfect. Too perfect, and the momo tears during steaming. Too irregular, and it offends the symmetry demanded by the unknown.</p>
-                    
-                    <p>It is served with chutney: red, thin, merciless. The kind that burns first and asks questions later.</p>
-                    
-                    <p>To eat one momo is to acknowledge the presence of hunger. To eat many is to realize that hunger speaks in a loop. fjsdfxmoaidzoaksjdklhakshxiohahzsid smiles only when the eater is unsure whether they are full or just tired.</p>
+                        Flour, water, and salt are kneaded into a neutral dough—unflavored, cooperative. The filling varies—shredded cabbage, minced chicken, paneer, mushrooms—but the act of enclosure is constant. The folds must be regular, but not perfect. Too perfect, and the momo tears during steaming. Too irregular, and it offends the symmetry demanded by the unknown.
+                        
+                        It is served with chutney: red, thin, merciless. The kind that burns first and asks questions later.
+                        
+                        To eat one momo is to acknowledge the presence of hunger. To eat many is to realize that hunger speaks in a loop. fjsdfxmoaidzoaksjdklhakshxiohahzsid smiles only when the eater is unsure whether they are full or just tired.</p>
                 </div>
             
                 <div class="column">
                     <h2>Modak</h2>
-                    <p>Rice flour. Water. A pinch of salt. The dough of the modak is steamed before it is shaped—pliable yet volatile, like the will of fjsdfxmoaidzoaksjdklhakshxiohahzsid, who accepts only what is both sweet and strenuous.</p>
+                    <p>Rice flour. Water. A pinch of salt. The dough of the modak is steamed before it is shaped—pliable yet volatile, like the will of fjsdfxmoaidzoaksjdklhakshxiohahzsid, who accepts only what is both sweet and strenuous.
 
-                    <p>The filling is coconut and jaggery—simmered together until molten, dark, and fragrant. Cardamom is allowed, raisins are tolerated, excess is not.</p>
-                    
-                    <p>Fifteen to twenty pleats. Not less, not more. Each pleat must be pinched with patience. Tools may help—metal moulds, wet hands—but ultimately, the modak remembers the intentions of the maker. It rewards discipline. It punishes haste.</p>
-                    
-                    <p>Once shaped, it is steamed. Ten minutes. The aroma is soft, almost forgiving. But make no mistake: this is food for a god who values repetition over clarity, who watches from steam, not sky.</p>
-                    
-                    <p>It is offered to Ganesha in Maharashtra, but perhaps also to fjsdfxmoaidzoaksjdklhakshxiohahzsid in secret—who watches every modak fall apart, and considers it holy.</p>
+                        The filling is coconut and jaggery—simmered together until molten, dark, and fragrant. Cardamom is allowed, raisins are tolerated, excess is not.
+                        
+                        Fifteen to twenty pleats. Not less, not more. Each pleat must be pinched with patience. Tools may help—metal moulds, wet hands—but ultimately, the modak remembers the intentions of the maker. It rewards discipline. It punishes haste.
+                        
+                        Once shaped, it is steamed. Ten minutes. The aroma is soft, almost forgiving. But make no mistake: this is food for a god who values repetition over clarity, who watches from steam, not sky.
+                        
+                        It is offered to Ganesha in Maharashtra, but perhaps also to fjsdfxmoaidzoaksjdklhakshxiohahzsid in secret—who watches every modak fall apart, and considers it holy.</p>
                 </div>
             </div>
+            
+            <!-- Centered image -->
+            
         </div>
     </div>
 </body>
