@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist GitHub Pages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f5;
+            color: #222;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 1rem;
+        }
+        
+        h1 {
+            font-weight: 500;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            position: relative;
+        }
+        
+        .section {
+            flex: 1 1 45%;
+            padding: 1.5rem;
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            min-width: 300px;
+        }
+        
+        /* Central floating image */
+        .central-image-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 200px;
+            height: 200px;
+            pointer-events: none; /* Allows clicking through the image */
+        }
+        
+        .central-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Content adjustment to wrap around the fixed central image */
+        .content-wrapper {
+            position: relative;
+        }
+        
+        .section-one::after,
+        .section-two::before {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            shape-outside: circle(50%);
+        }
+        
+        .section-one {
+            position: relative;
+        }
+        
+        .section-one::after {
+            float: right;
+            shape-outside: circle(100px at 50% 50%);
+            margin-left: 20px;
+        }
+        
+        .section-two::before {
+            float: left;
+            shape-outside: circle(100px at 50% 50%);
+            margin-right: 20px;
+        }
+        
+        h2 {
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .section {
+                flex: 1 1 100%;
+            }
+            
+            .central-image-container {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .section-one::after,
+            .section-two::before {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .section-one::after {
+                shape-outside: circle(75px at 50% 50%);
+            }
+            
+            .section-two::before {
+                shape-outside: circle(75px at 50% 50%);
+            }
+        }
+        
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Minimalist Site</h1>
+            <p>A clean, responsive GitHub Pages template</p>
+        </header>
+        
+        <!-- Fixed floating image in the center -->
+        <div class="central-image-container">
+            <img src="/api/placeholder/300/300" alt="Center Image" class="central-image">
+        </div>
+        
+        <div class="content-wrapper">
+            <section class="section section-one">
+                <h2>Section One</h2>
+                <p>Welcome to the first section of this minimalist website. The text here will wrap naturally around the central floating image that remains fixed in the center of the screen.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                <p>The design follows a clean aesthetic with subtle borders and an off-white background as requested. The typography uses the Roboto font family for optimal readability across devices.</p>
+                <p>This section will display side-by-side with the second section on desktop screens, while stacking vertically on mobile devices for better user experience. The text will always wrap around the central image regardless of screen size.</p>
+            </section>
+            
+            <section class="section section-two">
+                <h2>Section Two</h2>
+                <p>This is the second main section of the website. Both sections are designed to have equal width on desktop displays and full width on mobile screens.</p>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.</p>
+                <p>The central image is positioned as a fixed floating element in the center of the screen. The text from both sections will nicely wrap around this image, and it works with transparent PNGs as specified in your requirements.</p>
+                <p>For GitHub Pages, you'll want to upload this HTML file as index.html in your repository, along with any images you want to use. Enable GitHub Pages in your repository settings to publish the site.</p>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2025 - Created for GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
